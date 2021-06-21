@@ -1,5 +1,3 @@
 module.exports = {
-    publicPath: process.env.NODE_ENV === 'production'
-      ? '/ibg-vue/'
-      : '/'
+    publicPath: '/ibg-vue/'
   }

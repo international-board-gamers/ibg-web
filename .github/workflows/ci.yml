@@ -1,13 +1,11 @@
 name: IBG WEB CI
 
-on:
-  push:
-    branches: [ master ]
+on: [push]
     
 jobs:
   build:
+    name: Deploy to github pages
     runs-on: ubuntu-latest
-    name: Build Vue to github pages branch
     steps:
     - uses: actions/checkout@v2
     - id: Build-Vue

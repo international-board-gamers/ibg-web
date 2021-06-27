@@ -8,7 +8,7 @@
             meetupManager = "Andreas Löfman"
             controller = "Stefan Kuhns"
             v-bind:electionCouncil = "[
-                'Aleksandra',
+                'Aleksandra Kempińska',
                 'Jesus Berjano Pena',
                 'Nils Gerstner'
             ]"
@@ -25,6 +25,20 @@
                 'Andreas Löfman',
                 'Derrick Eriksson',
                 'Jesus Berjano Pena'
+            ]"
+        />
+
+        <Year
+            year = "2018 (2018 July - 2019 June)" 
+            chairman="David Gay-Perret"
+            treasurer = "Cenny Davidsson"
+            secretary = "Simon Forsberg"
+            meetupManager = "Fanny Pelletier"
+            controller = "Robin Larsson"
+            :electionCouncil = "[
+                'Andreas Löfman',
+                'Derrick Eriksson',
+                'Veronika Fedorova'
             ]"
         />
 

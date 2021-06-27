@@ -1,7 +1,6 @@
 <template>
   <div class="home">
     <p>
-      aaaaaaaa
         You like board games no matter the form? 
         You wish to meet new people while doing something fun?
         Perhaps you want to discover new games?

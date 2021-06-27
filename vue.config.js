@@ -1,3 +1,3 @@
 module.exports = {
-    publicPath: '/ibg-vue/'
+    publicPath: '/ibg-web/'
   }

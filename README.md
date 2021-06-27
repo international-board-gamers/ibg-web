@@ -1,5 +1,8 @@
 # ibg-vue
 
+See the Github page here https://international-board-gamers.github.io/ibg-web/ 
+
+## Bugfixing
 There was an issue with Vue CLI on Windows 10. Solution was to rename the vue.ps1 file in ´C:\Users\{username}\AppData\Roaming\npm´ to something else.
 
 ## Project setup

@@ -1,6 +1,19 @@
 <template>
     <div>
         <Year
+            year = "2021 (2021 July - 2022 June)" 
+            chairman = "Simon Forsberg"
+            treasurer = "Gustav Örtenberg"
+            secretary = "Charlotta Fredriksson"
+            controller = "Stefan Kuhns"
+            :electionCouncil = "[
+                'Aleksandra Kempińska',
+                'Asad Sayeed',
+                'Hanna Kraft'
+            ]"
+        />
+
+        <Year
             year = "2020 (2020 July - 2021 June)" 
             chairman="Simon Forsberg"
             treasurer = "Gustav Örtenberg"

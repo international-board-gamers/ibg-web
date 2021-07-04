@@ -8,8 +8,8 @@
             <span class="name">{{treasurer}}</span>
             <strong>Secretary</strong>
             <span class="name">{{secretary}}</span>
-            <strong>Meetup manager</strong>
-            <span class="name">{{meetupManager}}</span>
+            <strong v-if="meetupManager">Meetup manager</strong>
+            <span class="name" v-if="meetupManager">{{meetupManager}}</span>
             <strong>Controller</strong>
             <span class="name">{{controller}}</span>
             <strong>Election committee</strong>

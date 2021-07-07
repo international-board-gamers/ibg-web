@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background-image: radial-gradient(ellipse farthest-corner, #ef5b01, #792401);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: "Open Sans", sans-serif;
+}
+
+body::before {
+    display: block;
+    content: "";
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("~@/assets/board-and-pieces.png"), url("~@/assets/dice-and-cards.png");
+    background-size: 35%;
+    background-repeat: no-repeat;
+    background-position: top left, bottom right;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
+    z-index: -1;
+}
+
+#header img {
+    width: 30rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0.125rem 0.125rem 0.125rem hsla(0, 0%, 0%, 0.5));
+}
+
+#information {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    text-align: center;
+    color: white;
+    background-color: hsl(200, 100%, 60%);
+    border: 0.125rem dashed hsla(0, 0%, 100%, 0.65);
+}
+
+#nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.25rem;
+}
+
+#nav li {
+    display: block;
+    padding: 0 0.25rem;
+}
+
+#nav a {
+    display: block;
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    background-color: #f1e9b4;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    opacity: 0.75;
+}
+
+.router-link-active {
+    opacity: 1 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* Remove the extra empty links. */
+#nav a[href=""] {
+    display: none;
+}
+
+/* Remove the vertical bars. */
+#nav li:nth-child(even) {
+    display: none;
+}
+
+.home {
+    max-width: 50rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.25rem;
+    background-color: #f1e9b4;
+    text-align: center;
+    border-radius: 0.5rem;
+    filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
+}
+
+.home p {
+    text-align: left;
+}
+
+.home p + p {
+    margin-top: 1em;
+}
+
+.home > a {
+    display: inline-block;
+    margin-top: 1em;
+}

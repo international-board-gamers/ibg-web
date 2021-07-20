@@ -134,16 +134,6 @@ body::after {
     }
 }
 
-/* Remove the extra empty links. */
-#nav a[href=""] {
-    display: none;
-}
-
-/* Remove the vertical bars. */
-#nav li:nth-child(even) {
-    display: none;
-}
-
 .home {
     max-width: 50rem;
     margin-left: auto;

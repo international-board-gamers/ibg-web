@@ -11,28 +11,56 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
-body::before {
+body {
+    /* A strange grid with 1x1 cells, but we only use it to be able to overlap different elements more fluidly than with positioning. */
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+/* Put two background images in pseudo-elements in the same grid cell as the main content, then place them in the corners and below everything with z-index. */
+body::before, body::after {
     display: block;
     content: "";
     pointer-events: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("~@/assets/board-and-pieces.png"), url("~@/assets/dice-and-cards.png");
-    background-size: 35%;
+    background-size: contain;
     background-repeat: no-repeat;
-    background-position: top left, bottom right;
     filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
+    grid-row: 1;
+    grid-column: 1;
+    height: 100vh;
+    width: 100vw;
+    max-width: 40rem;
     z-index: -1;
 }
 
+body::before {
+    align-self: start;
+    justify-self: start;
+    background-image: url("board-and-pieces.png");
+    background-position: top left;
+}
+
+body::after {
+    align-self: end;
+    justify-self: end;
+    background-image: url("dice-and-cards.png");
+    background-position: bottom right;
+}
+
+#app {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 1rem;
+}
+
 #header img {
-    width: 30rem;
     display: block;
+    width: 100%;
+    max-width: 30rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 1.5rem;
     filter: drop-shadow(0.125rem 0.125rem 0.125rem hsla(0, 0%, 0%, 0.5));
 }
 
@@ -40,7 +68,7 @@ body::before {
     max-width: 50rem;
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     padding: 1rem;
     text-align: center;
     color: white;
@@ -50,30 +78,60 @@ body::before {
 
 #nav ul {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    font-size: 1.25rem;
+    background-color: #f1e9b4;
+    border-top-right-radius: 0.5rem;
+    border-top-left-radius: 0.5rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }
 
 #nav li {
     display: block;
-    padding: 0 0.25rem;
 }
 
 #nav a {
     display: block;
-    padding: 0.5rem 1rem;
-    font-weight: bold;
-    background-color: #f1e9b4;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
-    opacity: 0.75;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+    padding-bottom: 0.25rem;
+    padding-top: 0.25rem;
 }
 
-.router-link-active {
-    opacity: 1 !important;
-    position: relative;
-    z-index: 1;
+@media (min-width: 40rem) {
+    #nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+    }
+
+    #nav li {
+        display: block;
+        padding: 0 0.25rem;
+    }
+    
+    #nav a {
+        display: block;
+        padding: 0.5rem 1rem;
+        font-weight: bold;
+        background-color: #f1e9b4;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        opacity: 0.75;
+    }
+    
+    .router-link-active {
+        opacity: 1 !important;
+        position: relative;
+        z-index: 1;
+    }
 }
 
 /* Remove the extra empty links. */
@@ -91,10 +149,19 @@ body::before {
     margin-left: auto;
     margin-right: auto;
     padding: 1.25rem;
+    padding-top: 0;
     background-color: #f1e9b4;
     text-align: center;
-    border-radius: 0.5rem;
-    filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
+    border-bottom-right-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
+}
+
+@media (min-width: 40rem) {
+    .home {
+        padding: 1.25rem;
+        border-radius: 0.5rem;
+        filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
+    }
 }
 
 .home p {

@@ -1,11 +1,11 @@
 <template>
     <div id="nav">
         <ul>
-            <li><a href=""><router-link to="/">Start</router-link></a></li>
+            <li><router-link to="/">Start</router-link></li>
             <li>|</li>
-            <li><a href=""><router-link to="/Membership">Membership</router-link></a></li>
+            <li><router-link to="/Membership">Membership</router-link></li>
             <li>|</li>
-            <li><a href=""><router-link to="/Organizers">Organizers</router-link></a></li>
+            <li><router-link to="/Organizers">Organizers</router-link></li>
         </ul>
     </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="content">
     <p>
       Do you like board games no matter the form? Do you wish to meet new people while doing something fun?
     </p>

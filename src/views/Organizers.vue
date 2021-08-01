@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="content">
         <Year
             year = "2021 (2021 July - 2022 June)" 
             chairman = "Simon Forsberg"
@@ -72,15 +72,3 @@ export default {
     }
 }
 </script>
-
-<style scoped>
-strong {
-    letter-spacing:1px;
-    padding-top:10px;
-    display:block;
-}
-.names {
-    display: block;
-    margin-left: 20px;
-}
-</style>

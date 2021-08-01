@@ -1,5 +1,5 @@
 <template>
-    <div id="membership">
+    <div class="content">
         <h2>Benefits</h2>
         <p>
             <ul>
@@ -26,12 +26,3 @@
         </p>
     </div>
 </template>
-
-<script>
-</script>
-
-<style scoped>
-div {
-  align: left;
-}
-</style>

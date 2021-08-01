@@ -49,6 +49,13 @@ body::after {
 }
 
 #app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #2c3e50;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
     grid-row: 1;
     grid-column: 1;
     padding: 1rem;
@@ -56,8 +63,7 @@ body::after {
 
 #header img {
     display: block;
-    width: 100%;
-    max-width: 30rem;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 1.5rem;
@@ -65,9 +71,6 @@ body::after {
 }
 
 #information {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 1.5rem;
     padding: 1rem;
     text-align: center;
@@ -77,29 +80,31 @@ body::after {
 }
 
 #nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
     background-color: #f1e9b4;
     border-top-right-radius: 0.5rem;
     border-top-left-radius: 0.5rem;
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    padding: 0.5rem 1.25rem;
 }
-
+ 
 #nav li {
     display: block;
 }
 
 #nav a {
     display: block;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-bottom: 0.25rem;
-    padding-top: 0.25rem;
+    color: darkgoldenrod;
+    text-decoration: none;
+    padding: 0.5rem 0;
+}
+
+#nav a.router-link-exact-active {
+    color: forestgreen;
+}
+
+@media (max-width: 39rem) {
+    #nav li:hover {
+        background-color: #ebe09a;
+    }   
 }
 
 @media (min-width: 40rem) {
@@ -127,17 +132,19 @@ body::after {
         opacity: 0.75;
     }
     
-    .router-link-active {
+    .router-link-exact-active {
         opacity: 1 !important;
         position: relative;
         z-index: 1;
     }
 }
 
-.home {
-    max-width: 50rem;
-    margin-left: auto;
-    margin-right: auto;
+h1, h2 {
+    margin-top: 1em;
+    color: darkgoldenrod;
+}
+
+.content {
     padding: 1.25rem;
     padding-top: 0;
     background-color: #f1e9b4;
@@ -147,22 +154,30 @@ body::after {
 }
 
 @media (min-width: 40rem) {
-    .home {
+    .content {
         padding: 1.25rem;
         border-radius: 0.5rem;
         filter: drop-shadow(0.25rem 0.25rem 0.25rem hsla(0, 0%, 0%, 0.5));
     }
 }
 
-.home p {
+.content {
     text-align: left;
 }
 
-.home p + p {
+.content p + p {
     margin-top: 1em;
 }
 
-.home > a {
+.content ul > li {
+    margin-left: 1em;
+}
+
+.content ul > li > ul > li {
+    margin-left: 1em;
+}
+
+.content > a {
     display: inline-block;
     margin-top: 1em;
 }

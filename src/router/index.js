@@ -27,7 +27,12 @@ Vue.use(VueRouter)
     path: '/organizers',
     name: 'Organizers',
     component: () => import('../views/Organizers.vue')
-  }
+  },
+  {
+    path: '/about',
+    name: 'About IBG',
+    component: () => import('../views/About.vue')
+  }       
 ]
 
 const router = new VueRouter({

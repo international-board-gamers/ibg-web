@@ -3,8 +3,8 @@
     <div id="header">
         <img alt="IBG logo" src="./assets/ibg-logo.jpg">
         <div id="information">
-            <strong>During COVID-19 we are playing online instead.<br />
-            Join us on Meetup for more information.</strong>
+            <strong>
+            Join us on Meetup for time and location information.</strong>
         </div>
         <Menu />
     </div>
